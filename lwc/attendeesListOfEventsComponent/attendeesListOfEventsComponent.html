@@ -1,0 +1,24 @@
+<template>
+    <lightning-card variant="brand" title="My Events" icon-name="standard:event">
+      <div class="slds-m-around_small">
+        <lightning-accordion allow-multiple-sections-open active-section-name="Upcoming Events">
+            <template if:true={upcomingEventsList}>
+                <lightning-accordion-section name="Upcoming Events" label="Upcoming Events">
+                    <lightning-datatable data={upcomingEventsList} columns={eventUpcomingCol} key-field="Id"></lightning-datatable>
+                  </lightning-accordion-section>        
+            </template>      
+            <template if:true={error}>
+                {error}
+            </template>    
+            <template if:true={pastEventsList}>
+                <lightning-accordion-section name="Past Events" label="Past Events">
+                    <lightning-datatable  data={pastEventsList} columns={eventPastCol} key-field="Id"></lightning-datatable>
+                </lightning-accordion-section>
+            </template>
+            <template if:true={error}>
+                {error}
+            </template>  
+        </lightning-accordion>
+      </div>
+    </lightning-card>
+  </template>

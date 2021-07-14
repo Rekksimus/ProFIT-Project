@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AttendeesListOfEvents</members>
+        <members>AttendeesListOfEvents_Test</members>
+        <members>ErrorLogGenerator</members>
+        <members>ErrorLogGenerator_Test</members>
+        <members>EventAttendeeTrigger</members>
+        <members>EventAttendeeTrigger_Test</members>
+        <members>EventDetailsController</members>
+        <members>EventDetailsController_Test</members>
+        <members>EventRestService</members>
+        <members>EventRestService_Test</members>
+        <members>EventSpeakerTrigger</members>
+        <members>EventSpeakerTrigger_Test</members>
+        <members>LocationCalloutMock</members>
+        <members>LocationZIpVerifierCallout_Test</members>
+        <members>LocationZipVerifierCallout</members>
+        <members>UpdateEventBatch</members>
+        <members>UpdateEventBatch_Test</members>
+        <members>ZipCalloutMock</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>EventAttendeeTrigger</members>
+        <members>EventSpeakerTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Attendee__c.Company_Name__c</members>
+        <members>Attendee__c.Email__c</members>
+        <members>Attendee__c.Location_Address_Book__c</members>
+        <members>Attendee__c.Phone_Number__c</members>
+        <members>Error_Log__c.Log_Date_Tile__c</members>
+        <members>Error_Log__c.Log_Details__c</members>
+        <members>Error_Log__c.Log__c</members>
+        <members>Error_Log__c.Process_Name__c</members>
+        <members>Event_Attendee__c.Attendee__c</members>
+        <members>Event_Attendee__c.Event__c</members>
+        <members>Event_Organizer__c.Alt_Email__c</members>
+        <members>Event_Organizer__c.Alt_Phone_Number__c</members>
+        <members>Event_Organizer__c.Email__c</members>
+        <members>Event_Organizer__c.Location_Address_Book__c</members>
+        <members>Event_Organizer__c.Phone_Number__c</members>
+        <members>Event_Speaker__c.Event__c</members>
+        <members>Event_Speaker__c.Speaker__c</members>
+        <members>Event__c.End__c</members>
+        <members>Event__c.Event_Organizer__c</members>
+        <members>Event__c.Event_Type__c</members>
+        <members>Event__c.Event__c</members>
+        <members>Event__c.Frequency__c</members>
+        <members>Event__c.Live__c</members>
+        <members>Event__c.Location_Address_Book__c</members>
+        <members>Event__c.Location_Verified__c</members>
+        <members>Event__c.Max_Seats__c</members>
+        <members>Event__c.People_Attending__c</members>
+        <members>Event__c.Recurring__c</members>
+        <members>Event__c.Remaining_Seats__c</members>
+        <members>Event__c.Start__c</members>
+        <members>Event__c.Status_Indicator__c</members>
+        <members>Event__c.Status__c</members>
+        <members>Location__c.City__c</members>
+        <members>Location__c.Country__c</members>
+        <members>Location__c.Is_Zip_correct__c</members>
+        <members>Location__c.Landmark__c</members>
+        <members>Location__c.Postal_Code__c</members>
+        <members>Location__c.State__c</members>
+        <members>Location__c.Street__c</members>
+        <members>Location__c.Ver__c</members>
+        <members>Speaker__c.Company_Name__c</members>
+        <members>Speaker__c.Email__c</members>
+        <members>Speaker__c.Phone_Number__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Attendee__c</members>
+        <members>Error_Log__c</members>
+        <members>Event_Attendee__c</members>
+        <members>Event_Organizer__c</members>
+        <members>Event_Speaker__c</members>
+        <members>Event__c</members>
+        <members>Location__c</members>
+        <members>Speaker__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Attendee_Record_Page</members>
+        <members>Event_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Attendee__c-Attendee Layout</members>
+        <members>Error_Log__c-Error Log Layout</members>
+        <members>Event_Attendee__c-Event-Attendee Layout</members>
+        <members>Event_Organizer__c-Event Manager Layout</members>
+        <members>Event_Speaker__c-Event-Speaker Layout</members>
+        <members>Event__c-Event Layout</members>
+        <members>Location__c-Location Layout</members>
+        <members>Speaker__c-Speaker Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>attendeesListOfEventsComponent</members>
+        <members>eventDetailsComponent</members>
+        <members>eventDetailsTab</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Attendee</members>
+        <members>Event Manager</members>
+        <members>Speaker</members>
+        <name>Profile</name>
+    </types>
+    <version>51.0</version>
+</Package>

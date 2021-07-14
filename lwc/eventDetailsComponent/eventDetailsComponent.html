@@ -1,0 +1,81 @@
+<template>
+    <div class="slds-m-around_small">
+      <lightning-card
+        variant="Narrow"
+        title="Event Details"
+        icon-name="standard:event">
+        <lightning-tabset variant="scoped" active-tab-value="event">
+          <lightning-tab label="Event Details" value="event">
+            <div class="slds-m-around_small">
+              <lightning-record-form
+                record-id={recordId}
+                mode="readonly"
+                layout-type="Full"
+                columns="2"
+                object-api-name="Event__c">
+              </lightning-record-form>
+            </div>
+          </lightning-tab>
+          <lightning-tab
+            label="Event Speakers"
+            value="speaker"
+            onactive={handleSpeakerActive}>
+            <br /><br />
+            <template if:true={speakerList}>
+              <template for:each={speakerList} for:item="speaker">
+                <lightning-layout vertical-align="center" key={speaker.Id}>
+                    <lightning-layout-item padding="around-small">
+                      <p>{speaker.Name}</p>
+                      <p>
+                        <lightning-formatted-email value={speaker.Email}>
+                        </lightning-formatted-email>
+                      </p>
+                      <p>
+                        <lightning-formatted-phone value={speaker.Phone}>
+                        </lightning-formatted-phone>
+                      </p>
+                      <p>{speaker.CompanyName}</p>
+                    </lightning-layout-item>
+                  </lightning-layout>
+              </template>
+            </template>
+            <template if:false={errors}>
+              <template if:false={speakerList}>
+                There are no Speaker associated with the Event
+              </template>
+            </template>
+          </lightning-tab>
+          <lightning-tab
+            label="Event Location"
+            value="loaction"
+            onactive={handleLocatioDetails}>
+            <template if:true={eventRec}>
+              Location Landmark - {eventRec.Location_Address_Book__r.Landmark__c}
+              <lightning-formatted-address
+                city={eventRec.Location_Address_Book__r.City__c}
+                province={eventRec.Location_Address_Book__r.State__c}
+                postal-code={eventRec.Location_Address_Book__r.Postal_Code__c}
+                country={eventRec.Location_Address_Book__r.Country}
+                street={eventRec.Location_Address_Book__r.Street__c}
+                title="Event Location"
+              >
+              </lightning-formatted-address>
+            </template>
+          </lightning-tab>
+          <lightning-tab
+            label="Event Attendees"
+            value="attendee"
+            onactive={handleEventAttendee}>
+  
+            <lightning-datatable
+              key-field="id"
+              data={attendeesList}
+              show-row-number-column
+              hide-checkbox-column
+              columns={columnAtt}>
+            </lightning-datatable>
+          </lightning-tab>
+        </lightning-tabset>
+      </lightning-card>
+    </div>
+  </template>
